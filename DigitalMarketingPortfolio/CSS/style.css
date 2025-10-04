@@ -189,3 +189,40 @@ footer {
   padding: 20px 0;
   margin-top: 40px;
 }
+/* Keep header inline but shrink on small screens */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.2rem; /* chhota title */
+  }
+
+  nav ul {
+    gap: 10px; /* kam spacing between links */
+  }
+
+  nav ul li a {
+    font-size: 0.9rem; /* smaller font for links */
+  }
+
+  .header-container {
+    flex-wrap: wrap; /* allow little adjustment if needed */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 0.8rem;
+  }
+
+  nav ul {
+    gap: 8px;
+  }
+}
+.header-container {
+  flex-shrink: 1;
+  overflow: hidden;
+}
+
